@@ -1,14 +1,31 @@
-# Dependency directories
+# Node modules
 node_modules/
+package-lock.json
 
-# Environment variables (CRITICAL: NEVER COMMIT THIS!)
+# Environment variables
 .env
+.env.local
+.env.*.local
 
-# Logs
-logs
-*.log
-npm-debug.log*
+# Python cache & bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
 
-# OS generated files
+# Operating System files
 .DS_Store
 Thumbs.db
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

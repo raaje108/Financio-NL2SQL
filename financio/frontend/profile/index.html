@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financio - User Profile Dashboard</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="sidebar-brand">USERNAME</h2>
+        <div class="sidebar-menu">
+            <a href="#" class="sidebar-item">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                Dashboard
+
+            </a>
+            <a href="#shops" class="sidebar-item">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                My Shops
+            </a>
+            <a href="#" class="sidebar-item">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+                Transactions
+            </a>
+        </div>
+    </aside>
+
+    <div class="content-wrapper">
+        <!-- Top Navbar -->
+        <nav class="navbar glass">
+            <div class="logo">
+                <h1>FINANCIO</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="../main/index.html" class="nav-item">Home</a>
+                <a href="index.html#shops" class="nav-item">Shops</a>
+                <a href="index.html#add-shop" class="nav-item">Add Shop</a>
+
+                <a href="#" class="nav-item active">Profile</a>
+                <a href="index.html#contact" class="nav-item">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Main Dashboard: Profile UI -->
+        <main class="main-content">
+            <div class="header">
+                <h1>User Profile Dashboard</h1>
+                <a href="#edit-profile" class="btn btn-primary">Edit Profile</a>
+            </div>
+
+            <div class="profile-dashboard glass">
+                <div class="profile-header">
+                    <div class="profile-photo-wrapper" onclick="window.location.hash='avatar-modal'"
+                        style="cursor: pointer;" title="Select Avatar">
+                        <div class="profile-photo" id="profileDisplay">
+                            <img src="male_avatar.png"
+                                alt="Avatar" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                    </div>
+                    <div>
+                        <h2 style="font-size: 28px;">Johnathan Doe</h2>
+                        <p style="color: var(--text-muted); font-weight: 500;">Business Account & Primary Admin</p>
+                    </div>
+                </div>
+
+                <div class="profile-info-grid">
+                    <div class="profile-section">
+                        <span class="info-label">Email Address</span>
+                        <p class="info-value">john.doe@example.com</p>
+                    </div>
+                    <div class="profile-section">
+                        <span class="info-label">Phone Number</span>
+                        <p class="info-value">+91 98765 43210</p>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h4>About</h4>
+                    <p style="font-size: 15px; line-height: 1.6; color: var(--text-main);">Retail Logistics expert based
+                        in Hyderabad. Managing over 5 kirana outlets across the city with a focus on sustainable supply
+                        chain management and credit tracking.</p>
+                </div>
+
+                <!-- New Address Section -->
+                <div class="profile-section">
+                    <h4>Address</h4>
+                    <p style="font-size: 15px; line-height: 1.6; color: var(--text-main);">Plot No. 42, Hitech City Main
+                        Rd, Phase 2, Kavuri Hills, Madhapur, Hyderabad, Telangana 500033</p>
+                </div>
+
+                <div class="profile-section">
+                    <h4>Description</h4>
+                    <p style="font-size: 15px; line-height: 1.6; color: var(--text-muted);">Member since October 2024.
+                        Primary administrator for the Financo central ledger system. Responsible for verifying
+                        high-value transactions and managing shop onboarding.</p>
+                </div>
+
+                <div style="margin-top: 30px; display: flex; gap: 15px; justify-content: center;">
+                    <a href="#shops" class="btn btn-outline">View My Shops</a>
+                    <a href="#login" class="btn btn-outline"
+                        style="border-color: var(--red); color: var(--red);">Logout</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modals -->
+
+        <!-- Edit Profile Modal Updated with Address -->
+        <div class="modal-overlay" id="edit-profile">
+            <a href="#" style="position: absolute; inset: 0; cursor: default;"></a>
+            <div class="modal-card glass small">
+                <div class="modal-header">
+                    <h2 class="modal-title">Edit Details</h2>
+                    <a href="#" class="close-btn">&times;</a>
+                </div>
+                <div class="input-group">
+                    <div><span class="info-label">Full Name</span><input type="text" class="input-field"
+                            value="Johnathan Doe"></div>
+                    <div><span class="info-label">Email</span><input type="email" class="input-field"
+                            value="john.doe@example.com"></div>
+                    <div><span class="info-label">Phone</span><input type="tel" class="input-field"
+                            value="+91 98765 43210"></div>
+                    <div><span class="info-label">About</span><textarea
+                            class="input-field">Retail Logistics expert based in Hyderabad...</textarea></div>
+                    <div><span class="info-label">Address</span><textarea
+                            class="input-field">Plot No. 42, Hitech City Main Rd, Phase 2, Kavuri Hills, Madhapur, Hyderabad, Telangana 500033</textarea>
+                    </div>
+                    <div><span class="info-label">Description</span><textarea
+                            class="input-field">Member since October 2024...</textarea></div>
+                </div>
+                <div style="margin-top: 32px;">
+                    <a href="#" class="btn btn-primary" style="width: 100%;">Save Changes</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shops List Modal -->
+        <div class="modal-overlay" id="shops">
+            <a href="#" style="position: absolute; inset: 0; cursor: default;"></a>
+            <div class="modal-card large glass">
+                <div class="modal-header">
+                    <h2 class="modal-title">Your Shops & Logistics</h2>
+                    <a href="#" class="close-btn">&times;</a>
+                </div>
+
+                <div class="shops-grid">
+                    <a href="#ledger" class="shop-card glass">
+                        <div class="shop-title">
+                            <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" fill="none"
+                                stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            </svg>
+                            Sai Kirana Store
+                        </div>
+                        <div class="shop-address">124 Main Street, Koti Market, Hyderabad</div>
+                        <div style="margin-top: auto;">
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 65%;"></div>
+                            </div>
+                            <div class="shop-stats">
+                                <div class="stat-item"><span class="stat-label">Paid</span><span
+                                        class="stat-value stat-green">₹15,925</span></div>
+                                <div class="stat-item"><span class="stat-label">Pending</span><span
+                                        class="stat-value stat-red">₹8,575</span></div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#ledger" class="shop-card glass">
+                        <div class="shop-title">
+                            <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" fill="none"
+                                stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            </svg>
+                            Rahul Electronics
+                        </div>
+                        <div class="shop-address">Shop 4A, Ameerpet, Hyderabad</div>
+                        <div style="margin-top: auto;">
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                            <div class="shop-stats">
+                                <div class="stat-item"><span class="stat-label">Paid</span><span
+                                        class="stat-value stat-green">₹1,08,000</span></div>
+                                <div class="stat-item"><span class="stat-label">Pending</span><span
+                                        class="stat-value stat-red">₹12,000</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ledger Modal -->
+        <div class="modal-overlay" id="ledger">
+            <a href="#shops" style="position: absolute; inset: 0;"></a>
+            <div class="modal-card large glass">
+                <div class="modal-header">
+                    <h2 class="modal-title">Ledger: Sai Kirana Store</h2>
+                    <a href="#shops" class="close-btn">&times;</a>
+                </div>
+                <table class="ledger-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Product</th>
+                            <th>Total</th>
+                            <th>Paid</th>
+                            <th>Remaining</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Oct 20, 2026</td>
+                            <td>Rice (25kg)</td>
+                            <td>₹12,500</td>
+                            <td class="stat-green">₹8,000</td>
+                            <td class="stat-red">₹4,500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Add Shop Modal -->
+        <div class="modal-overlay" id="add-shop">
+            <a href="#" style="position: absolute; inset: 0;"></a>
+            <div class="modal-card small glass">
+                <div class="modal-header">
+                    <h2 class="modal-title">Add New Shop</h2><a href="#" class="close-btn">&times;</a>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="input-field" placeholder="Shop Name">
+                    <input type="text" class="input-field" placeholder="Owner Name">
+                    <textarea class="input-field" placeholder="Address"></textarea>
+                </div>
+                <a href="#" class="btn btn-primary" style="margin-top: 20px; width: 100%;">Create Profile</a>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div class="modal-overlay" id="login">
+            <a href="#" style="position: absolute; inset: 0;"></a>
+            <div class="modal-card small glass">
+                <div class="modal-header">
+                    <h2 class="modal-title">Login</h2><a href="#" class="close-btn">&times;</a>
+                </div>
+                <div class="input-group">
+                    <input type="email" class="input-field" placeholder="Email">
+                    <input type="password" class="input-field" placeholder="Password">
+                </div>
+                <a href="#" class="btn btn-primary" style="margin-top: 20px; width: 100%;">Sign In</a>
+            </div>
+        </div>
+
+        <!-- Contact Modal -->
+        <div class="modal-overlay" id="contact">
+            <a href="#" style="position: absolute; inset: 0;"></a>
+            <div class="modal-card small glass">
+                <div class="modal-header">
+                    <h2 class="modal-title">Contact Us</h2><a href="#" class="close-btn">&times;</a>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="input-field" placeholder="Name">
+                    <textarea class="input-field" placeholder="Message"></textarea>
+                </div>
+                <a href="#" class="btn btn-primary" style="margin-top: 20px; width: 100%;">Send</a>
+            </div>
+        </div>
+
+        <!-- Avatar Selection Modal -->
+        <div class="modal-overlay" id="avatar-modal">
+            <a href="#" style="position: absolute; inset: 0;"></a>
+            <div class="modal-card small glass">
+                <div class="modal-header">
+                    <h2 class="modal-title">Choose Avatar</h2><a href="#" class="close-btn">&times;</a>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px;">
+                    <img src="male_avatar.png"
+                        alt="Professional Man in Suit"
+                        style="width: 100%; border-radius: 50%; cursor: pointer; border: 2px solid transparent;"
+                        onclick="selectAvatar(this.src)" onmouseover="this.style.borderColor='var(--primary)'"
+                        onmouseout="this.style.borderColor='transparent'">
+                    <img src="female_avatar.png"
+                        alt="Professional Woman in Suit"
+                        style="width: 100%; border-radius: 50%; cursor: pointer; border: 2px solid transparent;"
+                        onclick="selectAvatar(this.src)" onmouseover="this.style.borderColor='var(--primary)'"
+                        onmouseout="this.style.borderColor='transparent'">
+                    <img src="indian_man_avatar.png"
+                        alt="Indian Man in Traditional Attire"
+                        style="width: 100%; border-radius: 50%; cursor: pointer; border: 2px solid transparent;"
+                        onclick="selectAvatar(this.src)" onmouseover="this.style.borderColor='var(--primary)'"
+                        onmouseout="this.style.borderColor='transparent'">
+                    <img src="indian_woman_avatar.png"
+                        alt="Indian Woman"
+                        style="width: 100%; border-radius: 50%; cursor: pointer; border: 2px solid transparent;"
+                        onclick="selectAvatar(this.src)" onmouseover="this.style.borderColor='var(--primary)'"
+                        onmouseout="this.style.borderColor='transparent'">
+                    <img src="man_casual_avatar.png"
+                        alt="Man in Smart Casual"
+                        style="width: 100%; border-radius: 50%; cursor: pointer; border: 2px solid transparent;"
+                        onclick="selectAvatar(this.src)" onmouseover="this.style.borderColor='var(--primary)'"
+                        onmouseout="this.style.borderColor='transparent'">
+                    <img src="woman_casual_avatar.png"
+                        alt="Woman in Smart Casual"
+                        style="width: 100%; border-radius: 50%; cursor: pointer; border: 2px solid transparent;"
+                        onclick="selectAvatar(this.src)" onmouseover="this.style.borderColor='var(--primary)'"
+                        onmouseout="this.style.borderColor='transparent'">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function selectAvatar(src) {
+            const profileDisplay = document.getElementById('profileDisplay');
+            profileDisplay.innerHTML = `<img src="${src}" alt="Avatar" style="width:100%; height:100%; object-fit:cover;">`;
+            window.location.hash = ''; // Close the modal
+        }
+    </script>
+</body>
+
+</html>
+
+
+<!-- end -->

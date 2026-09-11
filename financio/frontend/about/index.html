@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Financio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="container flex justify-between items-center" style="width:100%;">
+            <a href="../landingpage/index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-wallet"></i></div>
+                <span class="logo-text">Financio</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="../about/index.html" class="nav-link active-link">About Us</a>
+                <a href="../contact/index.html" class="nav-link">Contact Us</a>
+
+                <div id="auth-logged-out" style="display: flex; gap: 1rem; align-items: center;">
+                    <a href="../signup/index.html"><button class="btn-nav">Sign up</button></a>
+                    <a href="../login/index.html"><button class="btn-nav btn-outline">Login</button></a>
+                </div>
+
+                <div id="auth-logged-in" style="display: none; gap: 1rem; align-items: center;">
+                    <a href="../main/index.html"><button class="btn-nav">Dashboard</button></a>
+                    <button onclick="logoutUser()" class="btn-nav btn-outline">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="container text-center fade-in-up" style="position:relative;z-index:1;">
+            <div class="badge">
+                <div class="dot-ping"></div> About Financio
+            </div>
+            <h1 class="hero-title">
+                Empowering <span class="gradient-text">Businesses</span> with Smart Ledger Solutions
+            </h1>
+            <p class="hero-desc">
+                Financio is built to simplify supplier and merchant transactions with a modern, digital-first ledger system.
+            </p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">WHO WE ARE</span>
+                <h3 class="section-title">Redefining Business Accounting</h3>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-box" style="background: #ffedd5; color: #ea580c;">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>Digital Ledger System</h4>
+                    <p class="feature-text">
+                        Financio replaces traditional bahi-khata with a seamless digital ledger for suppliers to manage transactions efficiently.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-box" style="background: #fef3c7; color: #d97706;">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>Supplier-Merchant Focused</h4>
+                    <p class="feature-text">
+                        Built specifically for real-world business interactions between suppliers and merchants.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-box" style="background: #fed7aa; color: #c2410c;">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h4>Insightful Reports</h4>
+                    <p class="feature-text">
+                        Get detailed transaction reports to track profits, balances, and outstanding payments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <div class="mission-glow mission-glow-left"></div>
+        <div class="mission-glow mission-glow-right"></div>
+        <div class="container text-center" style="position:relative;z-index:1;">
+            <span class="mission-tag">OUR MISSION</span>
+            <h2 class="mission-title">Built for the Heart of Commerce</h2>
+            <p class="mission-desc">
+                To empower small and medium businesses by providing a simple, secure, and intelligent
+                platform for managing financial transactions without the complexity of traditional systems.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <div class="logo footer-logo">
+                        <div class="logo-icon logo-icon-light"><i class="fas fa-wallet"></i></div>
+                        <span class="logo-text" style="color:#fff;">Financio</span>
+                    </div>
+                    <p class="footer-desc">
+                        Making business accounting simple, fast, and accessible for everyone.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h6>Product</h6>
+                    <ul class="footer-links">
+                        <li><a href="../landingpage/index.html#features">Features</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Web App</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h6>Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="../about/index.html">About Us</a></li>
+                        <li><a href="../contact/index.html">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h6>Legal</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Financio Technologies Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const token = localStorage.getItem('financioToken');
+            const loggedOutDiv = document.getElementById('auth-logged-out');
+            const loggedInDiv = document.getElementById('auth-logged-in');
+
+            if (token) {
+                if (loggedOutDiv) loggedOutDiv.style.display = 'none';
+                if (loggedInDiv) loggedInDiv.style.display = 'flex';
+            } else {
+                if (loggedOutDiv) loggedOutDiv.style.display = 'flex';
+                if (loggedInDiv) loggedInDiv.style.display = 'none';
+            }
+        });
+
+        function logoutUser() {
+            localStorage.removeItem('financioToken');
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financio - Digital Ledger for Business</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav>
+        <div class="container flex justify-between items-center" style="width: 100%;">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fas fa-wallet"></i></div>
+                <span class="logo-text">Financio</span>
+            </a>
+            <div class="button-group">
+                <a href="../signup/index.html"><button class="btn-nav">Sign up</button></a>
+                <a href="../login/index.html"><button class="btn-nav btn-outline">Login</button></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="badge">
+                        <div class="dot-ping"></div>
+                        Trusted by 5M+ Businesses
+                    </div>
+                    <h1 class="hero-title">
+                        Simplify your <span class="gradient-text">Business Ledger</span> with Financio
+                    </h1>
+                    <p class="hero-desc">
+                        Replace your traditional paper Bahi Khata with a powerful digital ledger. Secure, automated, and 100% free forever.
+                    </p>
+                    <!-- ok -->
+                    <!-- <div class="store-buttons">
+                        <a href="#" class="store-btn btn-black">
+                            <i class="fab fa-google-play" style="font-size: 1.5rem;"></i>
+                            <div class="text-left">
+                                <p style="font-size: 0.6rem; opacity: 0.8; margin: 0;">GET IT ON</p>
+                                <p style="font-size: 1.1rem; font-weight: 600; margin: 0;">Google Play</p>
+                            </div>
+                        </a>
+                        <a href="#" class="store-btn btn-white">
+                            <i class="fab fa-apple" style="font-size: 1.5rem;"></i>
+                            <div class="text-left">
+                                <p style="font-size: 0.6rem; opacity: 0.8; margin: 0;">Download on the</p>
+                                <p style="font-size: 1.1rem; font-weight: 600; margin: 0;">App Store</p>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+
+                <div class="mockup-container">
+                    <div class="phone">
+                        <div class="phone-header">
+                            <p style="font-size:0.75rem;opacity:0.85;font-family:'DM Sans',sans-serif;">Total Balance</p>
+                            <h2 style="font-size:1.75rem;font-weight:700;margin:5px 0 20px;font-family:'Playfair Display',serif;">&#8377;45,230.00</h2>
+                            <div class="flex" style="gap:10px;">
+                                <div style="background:rgba(255,255,255,0.18);flex:1;padding:10px;border-radius:8px;text-align:center;">
+                                    <p style="font-size:0.6rem;text-transform:uppercase;letter-spacing:0.05em;font-family:'DM Sans',sans-serif;">Gave</p>
+                                    <p style="font-weight:700;font-family:'DM Sans',sans-serif;">&#8377;12,400</p>
+                                </div>
+                                <div style="background:rgba(255,255,255,0.18);flex:1;padding:10px;border-radius:8px;text-align:center;">
+                                    <p style="font-size:0.6rem;text-transform:uppercase;letter-spacing:0.05em;font-family:'DM Sans',sans-serif;">Got</p>
+                                    <p style="font-weight:700;color:#fde68a;font-family:'DM Sans',sans-serif;">&#8377;32,830</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="phone-body">
+                            <div class="flex justify-between" style="margin-bottom:15px;border-bottom:1px solid #f3e8d4;padding-bottom:8px;">
+                                <span style="font-weight:700;font-size:0.85rem;font-family:'Playfair Display',serif;color:#7c2d12;">Recent Transactions</span>
+                                <span style="color:#ea580c;font-size:0.75rem;font-family:'DM Sans',sans-serif;cursor:pointer;">See all</span>
+                            </div>
+                            <div class="transaction-card">
+                                <div class="avatar" style="background:#ffedd5;color:#ea580c;">JD</div>
+                                <div style="flex:1;">
+                                    <p style="font-size:0.8rem;font-weight:600;font-family:'DM Sans',sans-serif;">John Doe</p>
+                                    <p style="font-size:0.6rem;color:#a16207;font-family:'DM Sans',sans-serif;">2 hours ago</p>
+                                </div>
+                                <span style="color:#dc2626;font-weight:700;font-family:'DM Sans',sans-serif;">-&#8377;400</span>
+                            </div>
+                            <div class="transaction-card">
+                                <div class="avatar" style="background:#fef3c7;color:#d97706;">AS</div>
+                                <div style="flex:1;">
+                                    <p style="font-size:0.8rem;font-weight:600;font-family:'DM Sans',sans-serif;">Alice Smith</p>
+                                    <p style="font-size:0.6rem;color:#a16207;font-family:'DM Sans',sans-serif;">Yesterday</p>
+                                </div>
+                                <span style="color:#16a34a;font-weight:700;font-family:'DM Sans',sans-serif;">+&#8377;1,200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">CORE BENEFITS</span>
+                <h3 class="section-title">Why businesses choose Financio</h3>
+                <p class="section-desc">Everything you need to manage your business finances, in one place.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-box" style="background:#ffedd5;color:#ea580c;">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>Instant Reminders</h4>
+                    <p>Send free payment reminders to your customers via WhatsApp and SMS automatically.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box" style="background:#fef3c7;color:#d97706;">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>100% Safe &amp; Secure</h4>
+                    <p>Your data is automatically backed up online. Never lose your records even if you lose your phone.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box" style="background:#fed7aa;color:#c2410c;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Business Reports</h4>
+                    <p>Download PDF and Excel reports of your transactions to analyze your business performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item"><p class="stat-value">5M+</p><p class="stat-label">Active Merchants</p></div>
+                <div class="stat-item"><p class="stat-value">150+</p><p class="stat-label">Countries</p></div>
+                <div class="stat-item"><p class="stat-value">&#8377;2B+</p><p class="stat-label">Transactions</p></div>
+                <div class="stat-item"><p class="stat-value">4.8/5</p><p class="stat-label">App Rating</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo footer-logo">
+                        <div class="logo-icon logo-icon-light"><i class="fas fa-wallet"></i></div>
+                        <span class="logo-text" style="color:#fff;">Financio</span>
+                    </div>
+                    <p class="footer-desc">Making business accounting simple, fast, and accessible for everyone.</p>
+                </div>
+                <div class="footer-col">
+                    <h6>Product</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Web App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h6>Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h6>Legal</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Financio Technologies Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Intersection Observer to fade in elements
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.feature-card').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

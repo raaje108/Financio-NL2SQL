@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financio - Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">  
+       
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-wallet"></i></div>
+                <span class="logo-text">FINANCIO</span>
+            </a>
+            <a href="../login/index.html" class="btn-nav">Login</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="content-wrapper">
+            <!-- Left Side: Interesting Info -->
+            <div class="info-section">
+                <div class="info-header">
+                    <h1>Grow your business with <span>Financio.</span></h1>
+                    <p>The smartest way to manage your credit, debit, and daily cash flow. Join millions of merchants worldwide.</p>
+                </div>
+
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <div class="feature-text">
+                            <h4>Automated Ledgers</h4>
+                            <p>Track every penny automatically. Replace your old paper books with digital speed.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                        <div class="feature-text">
+                            <h4>Payment Reminders</h4>
+                            <p>Send free WhatsApp and SMS reminders to collect payments 3x faster.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                        <div class="feature-text">
+                            <h4>100% Cloud Backup</h4>
+                            <p>Your data is always safe. Access your ledger from any device, anywhere, anytime.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: The Sign Up Form -->
+            <div class="signup-card">
+                <h2>Create Account</h2>
+                <p class="form-subtitle">It's free and takes less than a minute</p>
+                
+                <form id="signupForm">
+                    <div class="input-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter Full Name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter Email Address" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phoneNo">Phone Number</label>
+                        <input type="tel" id="phoneNo" placeholder="Enter Phone Number" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                    
+                    <button type="submit">Signup</button>
+                </form>
+
+                <p class="footer-text">
+                    Already have an account? <a href="../login/index.html">Login here</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const signupForm = document.getElementById('signupForm');
+
+        signupForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); 
+
+            const full_name = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone_no = document.getElementById('phoneNo').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://localhost:8000/api/v1/users/signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ full_name, email, phone_no, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert('Signup successful! Please proceed to login.');
+                    window.location.href = '../login/index.html';
+                } else {
+                    alert(`Signup Failed: ${data.message}`);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Could not connect to the server. Is your backend running on port 8000?');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- end -->
