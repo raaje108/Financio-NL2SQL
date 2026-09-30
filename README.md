@@ -1,4 +1,4 @@
-# Financio ⚡ — Privacy-First Local NLP-to-SQL Ledger & Business Intelligence System
+# Financio-NL2SQL ⚡ — Smart Business Ledger & Privacy-First Natural Language to SQL Engine
 
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://python.org)
 [![Node.js Version](https://img.shields.io/badge/Node.js-v18%2B-green.svg?logo=nodedotjs&logoColor=white)](https://nodejs.org)
@@ -7,11 +7,11 @@
 [![API Privacy](https://img.shields.io/badge/Cloud%20APIs-Zero%20Dependency%20(100%25%20Local)-purple.svg)](#-nlp-to-sql-engine-architecture)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> **Financio** is an enterprise-grade business ledger management system featuring a **custom, privacy-first Natural Language Processing (NLP) to SQL translation engine**. It allows store owners, accountants, and non-technical business managers to execute complex relational database queries, insert ledger records, and analyze revenue trends using natural plain English.
+> **Financio-NL2SQL** is an enterprise-grade business ledger management system featuring a **custom, privacy-first Natural Language Processing (NLP) to SQL translation engine**. It allows store owners, accountants, and non-technical business managers to execute complex relational database queries, insert ledger records, and analyze revenue trends using natural plain English.
 
 ---
 
-## 🌟 Why Financio? (Recruiter & Technical Highlights)
+## 🌟 Why Financio-NL2SQL? (Recruiter & Technical Highlights)
 
 - 🧠 **Custom NLP-to-SQL Engine Built From Scratch**: No heavy LLM frameworks or external API calls (e.g. OpenAI/Anthropic). Powered by a mathematical Naive Bayes classifier with Laplace Smoothing and dynamic Named Entity Extraction (NER).
 - 🔒 **Zero Data Leakage & Zero Latency**: Executes 100% locally in **< 5ms** inference time without exposing financial ledger data to external cloud services.
