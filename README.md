@@ -134,7 +134,13 @@ python run_classifier_tests.py
 - **Python**: `v3.10` or higher (with `pymysql` installed: `pip install pymysql`)
 - **MySQL Server**: Running instance (v8.0+)
 
-### 1. Database Setup
+### 1. Clone Repository
+```bash
+git clone https://github.com/raaje108/Financio-NL2SQL.git
+cd Financio-NL2SQL
+```
+
+### 2. Database Setup
 Import the provided SQL schema into your local MySQL server:
 ```bash
 mysql -u root -p < financio/ledger.sql
